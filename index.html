@@ -20,7 +20,7 @@
         header h1 { margin: 0; font-size: 36px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
         header p { font-size: 18px; margin-top: 10px; color: #ffcc00; font-weight: bold; }
 
-        /* Grid */
+        /* Grid Layout */
         .container { max-width: 1200px; margin: -30px auto 40px; padding: 0 15px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
 
@@ -36,31 +36,46 @@
         .card p { font-size: 14px; color: #555; line-height: 1.6; flex-grow: 1; }
         .card .docs-head { font-weight: bold; color: #d9534f; font-size: 12px; margin-top: 10px; text-transform: uppercase; }
 
-        /* Footer & Glow Text */
+        /* Footer Section */
         footer { background: #001529; color: white; text-align: center; padding: 40px 20px; }
         
+        /* Glow Animation for "Ghar Baithe" */
         .special-note {
             display: block;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 900;
             color: var(--gold);
             text-transform: uppercase;
             margin-bottom: 20px;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+            padding: 10px;
+            border: 2px solid var(--gold);
+            border-radius: 10px;
             animation: glow 1.5s ease-in-out infinite alternate;
         }
 
         @keyframes glow {
-            from { text-shadow: 0 0 10px var(--gold); }
-            to { text-shadow: 0 0 20px #fff, 0 0 30px var(--gold); }
+            from { text-shadow: 0 0 5px var(--gold); box-shadow: 0 0 5px var(--gold); }
+            to { text-shadow: 0 0 20px #fff, 0 0 30px var(--gold); box-shadow: 0 0 15px var(--gold); }
         }
 
+        /* Shaking WhatsApp Button */
         .wa-btn {
-            background: var(--accent-green); color: white; padding: 15px 35px;
+            background: var(--accent-green); color: white; padding: 18px 40px;
             text-decoration: none; border-radius: 50px; font-weight: bold;
-            display: inline-block; font-size: 18px; margin-top: 20px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            display: inline-block; font-size: 20px; margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            animation: shake 2s infinite;
         }
+
+        @keyframes shake {
+            0% { transform: scale(1); }
+            10% { transform: scale(1.1) rotate(2deg); }
+            20% { transform: scale(1.1) rotate(-2deg); }
+            30% { transform: scale(1.1) rotate(2deg); }
+            40% { transform: scale(1) rotate(0); }
+        }
+
+        .wa-btn:hover { background: #1ebe57; animation: none; transform: scale(1.1); }
     </style>
 </head>
 <body>
@@ -147,5 +162,12 @@
 
 <footer>
     <span class="special-note">🏠 HAMARE YAHA GHAR BAITHE SABHI SERVICE KA LAABH UTHAYE 🏠</span>
-    <p>Pawan Cyber Home mein in sabhi services ke liye contact karein:</p>
-    <a href="
+    <p>Pawan Cyber Home (Mobile: 9334370723)</p>
+    <a href="https://wa.me/919334370723?text=Namaste%20Pawan%20ji,%20mujhe%20online%20kaam%20karwana%20hai" class="wa-btn" target="_blank">
+        🟢 WhatsApp par Chat karein
+    </a>
+    <p style="margin-top:20px; opacity:0.6; font-size: 12px;">&copy; 2026 PAWAN CYBER HOME | 9334370723</p>
+</footer>
+
+</body>
+</html>
