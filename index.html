@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAWAN CYBER HOME | Official</title>
     <style>
-        :root { --main-blue: #001f3f; --accent-green: #25D366; }
+        :root { --main-blue: #001f3f; --accent-green: #25D366; --gold: #ffd700; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f4f7f9; }
         
-        /* Image jaisa Header */
+        /* Header Section */
         header { 
             background: linear-gradient(rgba(0,31,63,0.85), rgba(0,31,63,0.85)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1470&auto=format&fit=crop');
             background-size: cover; color: white; padding: 50px 20px; text-align: center;
@@ -24,7 +24,7 @@
         .container { max-width: 1200px; margin: -30px auto 40px; padding: 0 15px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
 
-        /* Card Design as per Image */
+        /* Card Design */
         .card {
             background: #fff; border-radius: 12px; padding: 20px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.05);
@@ -36,12 +36,30 @@
         .card p { font-size: 14px; color: #555; line-height: 1.6; flex-grow: 1; }
         .card .docs-head { font-weight: bold; color: #d9534f; font-size: 12px; margin-top: 10px; text-transform: uppercase; }
 
-        /* Footer */
+        /* Footer & Glow Text */
         footer { background: #001529; color: white; text-align: center; padding: 40px 20px; }
+        
+        .special-note {
+            display: block;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px var(--gold); }
+            to { text-shadow: 0 0 20px #fff, 0 0 30px var(--gold); }
+        }
+
         .wa-btn {
             background: var(--accent-green); color: white; padding: 15px 35px;
             text-decoration: none; border-radius: 50px; font-weight: bold;
             display: inline-block; font-size: 18px; margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
     </style>
 </head>
@@ -56,47 +74,68 @@
 <div class="container">
     <div class="grid">
         <div class="card">
+            <h3>🎓 Admission Portal</h3>
+            <p>10th, 12th aur Graduation (BA/B.Sc/B.Com) Admission.</p>
+            <div class="docs-head">Documents:</div>
+            <p>Previous Marksheet, Photo, Aadhar, Mobile No.</p>
+        </div>
+
+        <div class="card">
+            <h3>📝 Examination Form</h3>
+            <p>Sabhi Board aur University ke Pariksha Form bhare jate hain.</p>
+            <div class="docs-head">Documents:</div>
+            <p>Registration Slip, Roll No., Photo, Sign.</p>
+        </div>
+
+        <div class="card">
             <h3>🪪 Aadhar & Ayushman</h3>
             <p>Aadhar Update, Print, Naya Ayushman Card KYC.</p>
             <div class="docs-head">Documents:</div>
             <p>Ration Card, Aadhar Card, Mobile No.</p>
         </div>
+
         <div class="card">
             <h3>💸 Banking & Money</h3>
             <p>Paisa Nikalna (AEPS), Money Transfer, Withdrawal.</p>
             <div class="docs-head">Documents:</div>
             <p>Aadhar Card, Bank Details.</p>
         </div>
+
         <div class="card">
             <h3>📜 Jamin & Revenue</h3>
             <p>Jamin Rasid, Dakhil Kharij, Parimarjan Plus.</p>
             <div class="docs-head">Documents:</div>
             <p>Purani Rasid, Kevala, Aadhar.</p>
         </div>
+
         <div class="card">
             <h3>📄 Certificates</h3>
             <p>Jaati, Aawasiye, Aay, E-Shram, Job Card.</p>
             <div class="docs-head">Documents:</div>
             <p>Photo, Swa-Ghoshna Patra, Aadhar.</p>
         </div>
+
         <div class="card">
             <h3>💳 PAN & Voter ID</h3>
             <p>Naya PAN Card, Voter ID Correction & Print.</p>
             <div class="docs-head">Documents:</div>
             <p>Aadhar Card, 2 Photo.</p>
         </div>
+
         <div class="card">
             <h3>🎫 Bookings</h3>
             <p>Flight, Train, Bus Ticket & Driving License.</p>
             <div class="docs-head">Documents:</div>
             <p>Yatri Detail, Aadhar Card.</p>
         </div>
+
         <div class="card">
             <h3>👴 Pension Schemes</h3>
             <p>Virdha, Vidow (Vidhwa) aur All Govt Pension.</p>
             <div class="docs-head">Documents:</div>
             <p>Bank Passbook, Aadhar, Death Cert.</p>
         </div>
+
         <div class="card">
             <h3>🖼️ Printing & Cards</h3>
             <p>Saadi Card, Visiting Card, Photo, Lamination.</p>
@@ -107,10 +146,6 @@
 </div>
 
 <footer>
+    <span class="special-note">🏠 HAMARE YAHA GHAR BAITHE SABHI SERVICE KA LAABH UTHAYE 🏠</span>
     <p>Pawan Cyber Home mein in sabhi services ke liye contact karein:</p>
-    <a href="https://wa.me/919334370723" class="wa-btn">🟢 Chat on WhatsApp: 9334370723</a>
-    <p style="margin-top:20px; opacity:0.6;">&copy; 2026 PAWAN CYBER HOME | Professional Web Design</p>
-</footer>
-
-</body>
-</html>
+    <a href="
