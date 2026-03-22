@@ -187,25 +187,45 @@
     </a>
     <p style="margin-top:20px; opacity:0.6; font-size: 12px;">&copy; 2026 PAWAN CYBER HOME | 9334370723</p>
 </footer>
-<section id="team" style="text-align: center; padding: 50px; background-color: #f4f4f4; margin-top: 50px;">
-    <h2 style="color: #333; font-family: sans-serif;">Hamari Management Team</h2>
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+<section id="team" style="padding: 60px 20px; text-align: center; background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); margin-top: 50px; font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+    
+    <h2 style="color: #2c3e50; font-size: 36px; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 2px; position: relative; display: inline-block;">
+        Hamari Management Team
+        <span style="content: ''; display: block; width: 60px; height: 4px; background: #007bff; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); border-radius: 2px;"></span>
+    </h2>
+
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
         
-        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 250px;">
-            <img src="pradeep.jpeg" alt="Mr. Prasad" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto 15px; display: block; border: 3px solid #007bff;">
-            <h3 style="margin: 10px 0 5px; color: #007bff; font-family: sans-serif;">Mr. Prasad</h3>
-            <p style="font-weight: bold; color: #555; font-family: sans-serif;">Managing Director</p>
-            <p style="font-size: 14px; color: #777; font-family: sans-serif;">Founder & Head of Operations</p>
+        <div class="team-card" style="background: white; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); width: 280px; transition: all 0.3s ease-in-out; border: 1px solid #eee;">
+            <div class="img-container" style="width: 130px; height: 130px; border-radius: 50%; margin: 0 auto 25px; overflow: hidden; border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                <img src="pradeep.jpeg" alt="Mr. Prasad" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+            </div>
+            <h3 style="margin: 0 0 8px; color: #007bff; font-size: 22px; font-weight: 600;">Mr. Prasad</h3>
+            <p style="margin: 0 0 15px; font-weight: bold; color: #34495e; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;">Managing Director</p>
+            <p style="margin: 0; font-size: 14px; color: #7f8c8d; line-height: 1.6; border-top: 1px solid #eee; padding-top: 15px;">Founder & Head of Operations, Leading the path for Pawan Cyber Home.</p>
         </div>
 
-        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 250px;">
-            <div style="width: 100px; height: 100px; background: #ddd; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #999;">No Photo</div>
-            <h3 style="margin: 10px 0 5px; color: #007bff; font-family: sans-serif;">Team Member Name</h3>
-            <p style="font-weight: bold; color: #555; font-family: sans-serif;">Author & Editor</p>
-            <p style="font-size: 14px; color: #777; font-family: sans-serif;">Content Strategy & Updates</p>
+        <div class="team-card" style="background: white; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); width: 280px; transition: all 0.3s ease-in-out; border: 1px solid #eee;">
+            <div class="img-container" style="width: 130px; height: 130px; border-radius: 50%; margin: 0 auto 25px; overflow: hidden; border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.2); background: #eee; display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 14px; color: #95a5a6; font-weight: bold;">No Photo</span>
+            </div>
+            <h3 style="margin: 0 0 8px; color: #007bff; font-size: 22px; font-weight: 600;">Team Member</h3>
+            <p style="margin: 0 0 15px; font-weight: bold; color: #34495e; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;">Author & Editor</p>
+            <p style="margin: 0; font-size: 14px; color: #7f8c8d; line-height: 1.6; border-top: 1px solid #eee; padding-top: 15px;">Content Strategy & Updates, Ensuring all info is accurate.</p>
         </div>
 
     </div>
 </section>
+
+<style>
+    .team-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+        border-color: #007bff !important;
+    }
+    .team-card:hover .img-container img {
+        transform: scale(1.1);
+    }
+</style>
 </body>
 </html>
