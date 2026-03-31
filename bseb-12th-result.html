@@ -3,107 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSEB inter 12th Result 2026 - Pawan Cyber Home</title>
+    <title>BSEB 12th Result 2026</title>
     <style>
-        /* Modern Result Page Design */
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f9; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        
-        .back-link { align-self: flex-start; max-width: 500px; margin: 0 auto 15px auto; width: 100%; }
-        .back-btn { text-decoration: none; color: #fff; font-weight: bold; font-size: 14px; background: #001f3f; padding: 8px 15px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-
-        .result-card { background: white; width: 100%; max-width: 500px; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 8px solid #1a237e; text-align: center; padding-bottom: 20px; }
-        
-        .header { background: #e8eaf6; padding: 25px; border-bottom: 1px solid #eee; }
-        .header h1 { color: #1a237e; margin: 0; font-size: 22px; text-transform: uppercase; }
-        .header p { margin: 5px 0 0; color: #555; font-size: 15px; font-weight: 500; }
-
-        .status-container { padding: 30px 20px; }
-        .status-badge { display: inline-block; background: #fff9c4; color: #827717; padding: 12px 20px; border-radius: 8px; border: 1px solid #fbc02d; font-weight: bold; font-size: 16px; margin-bottom: 20px; animation: pulse 2s infinite; }
-        
-        .info-text { color: #444; font-size: 15px; line-height: 1.6; margin-bottom: 25px; padding: 0 10px; }
-        
-        .whatsapp-section { background: #f1f8e9; margin: 0 20px; padding: 15px; border-radius: 10px; border: 1px dashed #2e7d32; }
-        .whatsapp-btn { display: inline-block; background: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 16px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); transition: 0.3s; }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
         }
 
-        .footer-text { font-size: 12px; color: #888; margin-top: 20px; }
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-top: 8px solid #1a237e;
+            text-align: center;
+        }
+
+        /* Home Button */
+        .home-btn {
+            display: inline-block;
+            background: #001f3f;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            margin: 15px;
+            float: left;
+        }
+
+        .header-section {
+            background: #e8eaf6;
+            padding: 20px;
+            clear: both;
+        }
+
+        h1 { color: #1a237e; font-size: 22px; margin: 0; }
+        p.subtitle { color: #555; margin-top: 5px; font-weight: bold; }
+
+        /* Status Badge */
+        .status-box {
+            background: #fff9c4;
+            border: 1px solid #fbc02d;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        /* Main Result Button */
+        .result-link {
+            text-decoration: none;
+            display: block;
+            margin: 20px auto;
+            width: 90%;
+        }
+
+        .main-btn {
+            background: linear-gradient(135deg, #d32f2f, #b71c1c);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4);
+            transition: transform 0.2s;
+        }
+
+        .main-btn:hover { transform: scale(1.02); }
+
+        /* Server & Text */
+        .server-text { font-weight: bold; color: #333; margin-bottom: 20px; }
+        .server-link { color: #d32f2f; text-decoration: underline; }
+
+        .info-text {
+            padding: 0 20px;
+            color: #666;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* WhatsApp Section */
+        .whatsapp-container {
+            border: 2px dashed #4caf50;
+            margin: 20px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .wa-btn {
+            background: #25d366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: #999;
+            padding-bottom: 15px;
+        }
     </style>
 </head>
 <body>
 
-    <div class="back-link">
-        <a href="index.html" class="back-btn">← Home Par Wapas Jayein</a>
+<div class="container">
+    <a href="/" class="home-btn">← Home Par Wapas Jayein</a>
+
+    <div class="header-section">
+        <h1>BIHAR INTER 12TH (BSEB) RESULT 2026</h1>
+        <p class="subtitle">Class 12th Annual Exam Result</p>
     </div>
 
-    <div class="result-card">
-        <div class="header">
-            <h1>Bihar inter 12th (BSEB) Result 2026</h1>
-            <p>Class 12th Annual Exam Result</p>
-        </div>
+    <div class="status-box">
+        📢 STATUS: Result live !
+    </div>
 
-        <div class="status-container">
-            <div class="status-badge">
-                📢 STATUS: Result live !
-            </div>
-            <div style="text-align: center; margin: 30px 0; font-family: sans-serif;">
-    
-    <a href="https://interbiharboard.com/Default.html" target="_blank" style="text-decoration: none;">
-        <button class="result-btn">
+    <a href="https://interbiharboard.com/" target="_blank" class="result-link">
+        <button class="main-btn">
             🚀 CLICK HERE TO CHECK 12TH RESULT 2026
         </button>
     </a>
 
-    <p style="margin-top: 15px; font-weight: bold; color: #555;">
+    <p class="server-text">
         Server Down hone par yahan try karein: 
-        <a href="https://interbiharboard.com/Default.html" target="_blank" style="color: #d32f2f;">Server 2</a>
+        <a href="https://interbiharboard.com/" class="server-link">Server 2</a>
     </p>
-</div>
 
-<style>
-.result-btn {
-    background: linear-gradient(135deg, #e63946, #b71c1c);
-    color: white;
-    padding: 18px 35px;
-    font-size: 22px;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    transition: 0.3s;
-    animation: glowing 1.5s infinite;
-}
-
-.result-btn:hover {
-    background: linear-gradient(135deg, #b71c1c, #e63946);
-    transform: scale(1.05);
-}
-
-@keyframes glowing {
-    0% { box-shadow: 0 0 5px #e63946; }
-    50% { box-shadow: 0 0 25px #ff5252; }
-    100% { box-shadow: 0 0 5px #e63946; }
-}
-</style>
-            <p class="info-text">
-                Bihar Board 12th (inter) ka result bahut jald jari kiya jayega. Jaise hi link active hoga, aap yahan se apna <b>Roll Code</b> aur <b>Roll Number</b> daalkar result check kar sakenge.
-            </p>
-
-            <div class="whatsapp-section">
-                <p style="margin-top: 0; font-weight: bold; color: #2e7d32;">Result ka Link turant paane ke liye:</p>
-                <a href="https://wa.me/919334370723?text=Mujhe inter Result ka link chahiye" class="whatsapp-btn">
-                    WhatsApp Group Join Karein
-                </a>
-            </div>
-        </div>
-
-        <p class="footer-text">Pawan Cyber Home - Sabse Pehle Update</p>
+    <div class="info-text">
+        Bihar Board 12th (inter) ka result bahut jald jari kiya jayega. Jaise hi link active hoga, aap yahan se apna <b>Roll Code</b> aur <b>Roll Number</b> daalkar result check kar sakenge.
     </div>
+
+    <div class="whatsapp-container">
+        <p style="color: #2e7d32; font-weight: bold; margin-bottom: 15px;">Result ka Link turant paane ke liye:</p>
+        <a href="#" class="wa-btn">WhatsApp Group Join Karein</a>
+    </div>
+
+    <div class="footer-text">
+        Pawan Cyber Home - Sabse Pehle Update
+    </div>
+</div>
 
 </body>
 </html>
