@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10th Pass Scholarship 2026 | Pawan Cyber Home</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --accent-color: #e11d48;
+            --success-color: #16a34a;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: #334155;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            margin: 10px 0 0;
+            font-size: 16px;
+            color: #f1f5f9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        /* Main Grid Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+            margin-bottom: 25px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Alert / Highlight Box */
+        .alert-box {
+            background-color: #fff1f2;
+            border-left: 5px solid var(--accent-color);
+            color: #9f1239;
+            padding: 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        /* Lists style */
+        .doc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .doc-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .doc-list li::before {
+            content: "➔";
+            color: var(--success-color);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* Action Buttons Grid */
+        .btn-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .action-btn {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-apply { background-color: var(--success-color); }
+        .btn-apply:hover { background-color: #15803d; transform: translateY(-2px); }
+
+        .btn-status { background-color: var(--primary-color); }
+        .btn-status:hover { background-color: #1d4ed8; transform: translateY(-2px); }
+
+        .btn-home { background-color: #475569; }
+        .btn-home:hover { background-color: #334155; transform: translateY(-2px); }
+
+        /* Quick Links Sidebar */
+        .quick-links a {
+            display: block;
+            padding: 12px;
+            background: #f8fafc;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border-left: 3px solid var(--primary-color);
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .quick-links a:hover {
+            background: #f1f5f9;
+            color: var(--accent-color);
+            padding-left: 18px;
+        }
+
+        .blink-badge {
+            background: red;
+            color: white;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            float: right;
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Header -->
+    <div class="header">
+        <h1>🎓 10th Pass (Matric) Scholarship Portal 2026</h1>
+        <p>मुख्यमंत्री बालक/बालिका प्रोत्साहन योजना — ₹10,000/- ऑनलाइन आवेदन</p>
+    </div>
+
+    <div class="container">
+        
+        <!-- Live Alert Box -->
+        <div class="alert-box">
+            🔥 UPDATE: Bihar Board 10th Pass Scholarship 2026 ka online aavedan shuru ho chuka hai. Niche diye gaye link se turant apply karein!
+        </div>
+
+        <div class="main-grid">
+            
+            <!-- Left Side: Main Content -->
+            <div class="content-area">
+                
+                <!-- Card 1: Scheme Details -->
+                <div class="card">
+                    <h2 class="card-title">ℹ️योजना की जानकारी </h2>
+                    <p>बिहार बोर्ड 10वीं पास छात्रों के लिए बड़ी खुशखबरी!
+
+बिहार सरकार द्वारा मैट्रिक (10th) परीक्षा 2026 में 1st Division और तय मानदंडों के अनुसार 2nd Division से पास होने वाले सभी छात्र-छात्राओं को ₹10,000/- की प्रोत्साहन राशि सीधे बैंक खाते में भेजी जा रही है। अपनी सफलता का लाभ उठाएं और आज ही आवेदन करें!</p>
+                    <p style="font-weight: bold; color: var(--accent-color);">⚠️ महत्वपूर्ण सूचना: बैंक खाता केवल छात्र/छात्रा के नाम का होना चाहिए और वह आधार कार्ड से लिंक (NPCI Seeded) होना अनिवार्य है, अन्यथा पैसा रुक सकता है।</p>
+                </div>
+ <!-- Card 3: Direct Action Links -->
+                <div class="card">
+                    <h2 class="card-title">⚡ Fast Server Links</h2>
+                    <p>Apna aavedan karne ya status check karne ke liye niche click karein:</p>
+                    
+                    <div class="btn-grid">
+                        <!-- Medhasoft Official Link Par open hoga -->
+                        <a href=https://medhasoft.bihar.gov.in/Matric2627/(S(ulrwn2kbcrbrcqiokxnog0am))/Apply.aspx target="_blank" class="btn-apply action-btn">🚀 Apply Online </a>
+                        <a href=https://medhasoft.bihar.gov.in/Matric2627/(S(ulrwn2kbcrbrcqiokxnog0am))/ApplicationStatus.aspx target="_blank" class="btn-status action-btn">🔍 Check Application Status</a>
+                        <a href=https://medhasoft.bihar.gov.in/Matric2627/(S(ulrwn2kbcrbrcqiokxnog0am))/Default.aspx class="btn-home action-btn">🏠 Official Website</a>
+                    </div>
+                </div>
+
+
+                <!-- Card 2: Required Documents -->
+                <div class="card">
+                    <h2 class="card-title">📁 आवश्यक दस्तावेज (Zaroori Kagaz)</h2>
+                    <p>ऑनलाइन आवेदन करने से पहले यह सभी दस्तावेज अपने पास तैयार रखें:</p>
+                    <ul class="doc-list">
+                        <li>मैट्रिक (10th) का मार्कशीट (रोल नंबर और रोल कोड के साथ)</li>
+                        <li>आधार कार्ड (नाम और जन्म तिथि मार्कशीट से मैच होना चाहिए)</li>
+                        <li>जाति प्रमाण पत्र (Caste Certificate)</li>
+                        <li>आय प्रमाण पत्र (Income Certificate)</li>
+                        <li>निवास प्रमाण पत्र (Residence Certificate)</li>
+                        <li>बैंक पासबुक (खाता आधार से लिंक होना अनिवार्य है)</li>
+                        <li>चालू मोबाइल नंबर और ईमेल आईडी</li>
+                    </ul>
+                </div>
+
+              
+
+            </div>
+
+            <!-- Right Side: Sidebar Quick Links -->
+            <div class="sidebar-area">
+                
+                <div class="card">
+                    <h2 class="card-title">🔗 Quick Links</h2>
+                    <div class="quick-links">
+                        <a href=https://medhasoft.bihar.gov.in/Matric2627/(S(ulrwn2kbcrbrcqiokxnog0am))/Default.aspx target="_blank">Official Website <span class="blink-badge">Live</span></a>
+                        <a href="https://medhasoft.bih.nic.in/" target="_blank">Student List For Registration</a>
+                        <a href="https://medhasoft.bih.nic.in/" target="_blank">Category Wise Report List</a>
+                        <a href="https://wa.me/919334370723?text=Mujhe%2010th%20Scholarship%20ka%20form%20bhrwana%20hai" target="_blank" style="border-left-color: #25D366; color: #16a34a;">💬 Apply Via WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="card" style="text-align: center; background: #f0fdf4; border-color: #bbf7d0;">
+                    <h3 style="color: #166534; margin-top: 0;">📞 फॉर्म भरवाने के लिए :</h3>
+                    <p style="font-size: 14px;">अगर आपको फॉर्म भरने में कोई दिक्कत हो तो हमारे साइबर कैफे से संपर्क करे :</p>
+                    <strong style="color: var(--accent-color); font-size: 18px;">Pawan Cyber Home</strong><br>
+                    <span style="font-weight: bold; display: inline-block; margin-top: 5px;">📲 Call/WhatsApp: 9334370723</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 PAWAN CYBER HOME | Designed for Bihar Students</p>
+        <p style="font-size: 12px; opacity: 0.6;">Thank You</p>
+    </footer>
+
+</body>
+</html>
