@@ -9,16 +9,24 @@
             --primary-color: #1e3a8a;
             --accent-color: #e11d48;
             --success-color: #16a34a;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
+            --scheme-header-bg: #f5eae1; 
+            --scheme-text-color: #8c1d40; 
         }
 
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color);
             color: #334155;
+            
+            /* बैकग्राउंड में असली कलाकारी: टेक-लुक ग्रिड और बारीक डॉट्स का कॉम्बिनेशन */
+            background-color: #f3f4f6;
+            background-image: 
+                radial-gradient(rgba(30, 58, 138, 0.1) 1px, transparent 0),
+                linear-gradient(to right, rgba(30, 58, 138, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(30, 58, 138, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px, 40px 40px, 40px 40px;
+            background-attachment: fixed;
         }
 
         /* Header Section */
@@ -27,7 +35,8 @@
             color: white;
             text-align: center;
             padding: 40px 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+            border-bottom: 4px solid var(--accent-color);
         }
 
         .header h1 {
@@ -62,14 +71,22 @@
             }
         }
 
-        /* Card Styles */
+        /* Premium Card Styles */
         .card {
-            background: var(--card-bg);
+            background: #ffffff;
             border-radius: 12px;
             padding: 25px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
             margin-bottom: 25px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            border-color: rgba(30, 58, 138, 0.2);
         }
 
         .card-title {
@@ -77,11 +94,68 @@
             color: var(--primary-color);
             margin-top: 0;
             margin-bottom: 15px;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 2px solid #e5e7eb;
             padding-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+
+        /* Compact Scholarship Scheme Box (As per image_0864ed.png) */
+        .scheme-box {
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #d1d5db;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            overflow: hidden;
+            max-width: 650px;
+        }
+
+        .scheme-box-header {
+            background-color: var(--scheme-header-bg);
+            padding: 10px 15px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .scheme-box-header h3 {
+            margin: 0;
+            font-size: 15px;
+            color: var(--scheme-text-color);
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .scheme-box-body {
+            padding: 12px 15px;
+        }
+
+        .scheme-links-row {
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .reg-open {
+            color: #16a34a;
+            margin-right: 4px;
+        }
+
+        .link-style {
+            color: #2563eb;
+            text-decoration: none;
+            padding: 2px 4px;
+            transition: color 0.2s;
+        }
+
+        .link-style:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
         }
 
         /* Alert / Highlight Box */
@@ -90,15 +164,16 @@
             border-left: 5px solid var(--accent-color);
             color: #9f1239;
             padding: 15px;
-            border-radius: 4px;
+            border-radius: 6px;
             font-weight: bold;
             margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(225, 29, 72, 0.1);
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
             0% { opacity: 1; }
-            50% { opacity: 0.8; }
+            50% { opacity: 0.85; }
             100% { opacity: 1; }
         }
 
@@ -111,7 +186,7 @@
 
         .doc-list li {
             padding: 10px 0;
-            border-bottom: 1px dashed #e2e8f0;
+            border-bottom: 1px dashed #e5e7eb;
             display: flex;
             align-items: center;
             font-size: 15px;
@@ -123,35 +198,6 @@
             margin-right: 10px;
             font-weight: bold;
         }
-
-        /* Action Buttons Grid */
-        .btn-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .action-btn {
-            display: block;
-            text-align: center;
-            padding: 14px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .btn-apply { background-color: var(--success-color); }
-        .btn-apply:hover { background-color: #15803d; transform: translateY(-2px); }
-
-        .btn-status { background-color: var(--primary-color); }
-        .btn-status:hover { background-color: #1d4ed8; transform: translateY(-2px); }
-
-        .btn-home { background-color: #475569; }
-        .btn-home:hover { background-color: #334155; transform: translateY(-2px); }
 
         /* Quick Links Sidebar */
         .quick-links a {
@@ -168,9 +214,10 @@
         }
 
         .quick-links a:hover {
-            background: #f1f5f9;
+            background: #ffffff;
             color: var(--accent-color);
             padding-left: 18px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
 
         .blink-badge {
@@ -191,9 +238,10 @@
             background: #0f172a;
             color: #cbd5e1;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             margin-top: 40px;
             font-size: 14px;
+            border-top: 4px solid var(--primary-color);
         }
     </style>
 </head>
@@ -219,32 +267,56 @@
                 
                 <!-- Card 1: Scheme Details -->
                 <div class="card">
-                    <h2 class="card-title">ℹ️योजना की जानकारी </h2>
-                    <p>बिहार बोर्ड 10वीं पास छात्रों के लिए बड़ी खुशखबरी!
+                    <h2 class="card-title">ℹ️ योजना की जानकारी</h2>
+                    <p>बिहार बोर्ड 12वीं पास छात्रों के लिए बड़ी खुशखबरी!
 
-बिहार सरकार द्वारा इंटर (12th) पास होने वाली छात्राओं को 25,000/- की प्रोत्साहन राशि सीधे बैंक खाते में भेजी जा रही है। अपनी सफलता का लाभ उठाएं और जो छात्रा (SC/ST) जाति से सम्बन्ध रखते है और 1st Division और  2nd Division स्थान से उत्तीर्ण हुय है उन्हीं  छात्रा को 15,000/-  की प्रोत्साहन राशि सीधे बैंक खाते में भेजी जाएगी !</p>
+बिहार सरकार द्वारा इंटर (12th) पास होने वाली छात्राओं को 25,000/- की प्रोत्साहन राशि सीधे बैंक खाते में भेजी जा रही है। अपनी सफलता का लाभ उठाएं और जो छात्रा (SC/ST) जाति से सम्बन्ध रखते है और 1st Division और 2nd Division स्थान से उत्तीर्ण हुए है उन्हीं छात्रा को 15,000/- की प्रोत्साहन राशि सीधे बैंक खाते में भेजी जाएगी!</p>
                     <p style="font-weight: bold; color: var(--accent-color);">⚠️ महत्वपूर्ण सूचना: बैंक खाता केवल छात्र/छात्रा के नाम का होना चाहिए और वह आधार कार्ड से लिंक (NPCI Seeded) होना अनिवार्य है, अन्यथा पैसा रुक सकता है।</p>
                 </div>
- <!-- Card 3: Direct Action Links -->
-                <div class="card">
-                    <h2 class="card-title">⚡ Fast Server Links</h2>
-                    <p>अपना आवेदन करने या स्थिति जांच ने के लिए नीचे दिए गए लिंक पर क्लिक करे:</p>
-                    
-                    <div class="btn-grid">
-                        <!-- Medhasoft Official Link Par open hoga -->
-                        <a href=https://medhasoft.bihar.gov.in/Inter2627/(S(rt2a0jbiwjqalukjyqndeiua))/Apply.aspx target="_blank" class="btn-apply action-btn">🚀 Apply Online </a>
-                        <a href=https://medhasoft.bihar.gov.in/Inter2627/(S(qvxd43lz2d4a5lekc5mgapav))/ApplicationStatus.aspx target="_blank" class="btn-status action-btn">🔍 Check Application Status</a>
-                        <a href=https://medhasoft.bihar.gov.in/InterSCST2026/(S(kzt12nvmk4v4qr3c4hq3qpij))/Apply.aspx class="btn-home action-btn">🚀 Apply Online (SC/ST)</a>
-                    </div>
-                </div>
 
+                <!-- Link Section Transformed as per image_0864ed.png -->
+                <div class="card">
+                    <h2 class="card-title">⚡ Fast Server Links (Year 2026)</h2>
+                    <p style="margin-bottom: 15px;">अपना आवेदन करने या स्थिति जांचने के लिए नीचे दिए गए लिंक्स पर क्लिक करें:</p>
+                    
+                    <!-- Scheme 1 Box (Compact) -->
+                    <div class="scheme-box">
+                        <div class="scheme-box-header">
+                            <h3>मुख्यमंत्री कन्या उत्थान योजना<br>मुख्यमंत्री बालिका प्रोत्साहन योजना (माध्यमिक +2)</h3>
+                        </div>
+                        <div class="scheme-box-body">
+                            <div class="scheme-links-row">
+                                » <b>Year 2026</b> <span class="reg-open">[Registration Open]</span> 
+                                <b>[</b> <a href="https://medhasoft.bihar.gov.in/Inter2627/(S(rt2a0jbiwjqalukjyqndeiua))/Apply.aspx" target="_blank" class="link-style">Apply Online</a> 
+                                | 
+                                <a href="https://medhasoft.bihar.gov.in/Inter2627/(S(qvxd43lz2d4a5lekc5mgapav))/ApplicationStatus.aspx" target="_blank" class="link-style">Check Status</a> <b>]</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scheme 2 Box (SC/ST - Compact) -->
+                    <div class="scheme-box">
+                        <div class="scheme-box-header">
+                            <h3>मुख्यमंत्री मेधावृत्ति योजना अनु० जाति एवं जनजाति<br>(प्रथम एवं द्वितीय श्रेणी +2 बालिकाओं के लिए)</h3>
+                        </div>
+                        <div class="scheme-box-body">
+                            <div class="scheme-links-row">
+                                » <b>Year 2026</b> <span class="reg-open">[Registration Open]</span> 
+                                <b>[</b> <a href="https://medhasoft.bihar.gov.in/InterSCST2026/(S(kzt12nvmk4v4qr3c4hq3qpij))/Apply.aspx" target="_blank" class="link-style">Apply Online</a> 
+                                | 
+                                <a href="https://medhasoft.bihar.gov.in/InterSCST2026/(S(kzt12nvmk4v4qr3c4hq3qpij))/Apply.aspx" target="_blank" class="link-style">Check Status</a> <b>]</b>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
                 <!-- Card 2: Required Documents -->
                 <div class="card">
                     <h2 class="card-title">📁 आवश्यक दस्तावेज (Zaroori Kagaz)</h2>
                     <p>ऑनलाइन आवेदन करने से पहले यह सभी दस्तावेज अपने पास तैयार रखें:</p>
                     <ul class="doc-list">
-                        <li>मैट्रिक (12th) का मार्कशीट (रोल नंबर और रोल कोड के साथ)</li>
+                        <li>इंटर (12th) का मार्कशीट (रोल नंबर और रोल कोड के साथ)</li>
                         <li>आधार कार्ड (नाम और जन्म तिथि मार्कशीट से मैच होना चाहिए)</li>
                         <li>जाति प्रमाण पत्र (Caste Certificate)</li>
                         <li>आय प्रमाण पत्र (Income Certificate)</li>
@@ -254,8 +326,6 @@
                     </ul>
                 </div>
 
-              
-
             </div>
 
             <!-- Right Side: Sidebar Quick Links -->
@@ -264,10 +334,10 @@
                 <div class="card">
                     <h2 class="card-title">🔗 Quick Links</h2>
                     <div class="quick-links">
-                        <a href=https://medhasoft.bihar.gov.in/Inter2627/(S(dmpcia51f1akei5apzktbpnd))/Default.aspx target="_blank">Official Website <span class="blink-badge">Live</span></a>
+                        <a href="https://medhasoft.bihar.gov.in/Inter2627/(S(dmpcia51f1akei5apzktbpnd))/Default.aspx" target="_blank">Official Website <span class="blink-badge">Live</span></a>
                         <a href="https://medhasoft.bih.nic.in/" target="_blank">Student List For Registration</a>
                         <a href="https://medhasoft.bih.nic.in/" target="_blank">Category Wise Report List</a>
-                        <a href="https://wa.me/919334370723?text=Mujhe%2010th%20Scholarship%20ka%20form%20bhrwana%20hai" target="_blank" style="border-left-color: #25D366; color: #16a34a;">💬 Apply Via WhatsApp</a>
+                        <a href="https://wa.me/919334370723?text=Mujhe%2012th%20Scholarship%20ka%20form%20bhrwana%20hai" target="_blank" style="border-left-color: #25D366; color: #16a34a;">💬 Apply Via WhatsApp</a>
                     </div>
                 </div>
 
