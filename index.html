@@ -40,9 +40,22 @@
         header h1 { margin: 0; font-size: 36px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
         header p { font-size: 18px; margin-top: 10px; color: #ffcc00; font-weight: bold; }
 
-        /* Grid Layout */
-        .container { max-width: 1200px; margin: -30px auto 40px; padding: 0 15px; box-sizing: border-box; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        /* Grid Layout - अब यह बड़ी स्क्रीन पर एक लाइन में 4 कंटेंट दिखाएगा */
+        .container { max-width: 1300px; margin: -30px auto 40px; padding: 0 15px; box-sizing: border-box; }
+        
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(1, 1fr); 
+            gap: 20px; 
+        }
+        
+        /* Responsive Breakpoints */
+        @media (min-width: 640px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 1024px) {
+            .grid { grid-template-columns: repeat(4, 1fr); } /* 1 लाइन में 4 बक्से */
+        }
 
         /* Card Design */
         .card {
@@ -149,7 +162,7 @@
         <div class="card" style="border-top: 5px solid #e11d48; position: relative;">
             <span class="blink-tag" style="background: #e11d48; color: white; position: absolute; top: 10px; right: 10px;">LIVE</span>
             <h3 style="color: #e11d48; margin-top: 10px;">🎓  स्कॉलरशिप</h3>
-            <p style="font-size: 14px; color: #333; font-weight: bold;">मुख्यमंत्री बालक/बालika प्रोत्साहन योजना आवेदन करें।</p>
+            <p style="font-size: 14px; color: #333; font-weight: bold;">मुख्यमंत्री बालक/बालिका प्रोत्साहन योजना आवेदन करें।</p>
             <div style="font-weight: bold; color: #d32f2f; margin-top: 12px; font-size: 14px; border-top: 1px solid #eee; padding-top: 5px; margin-bottom: 5px;">Link Active:</div>
             
             <a href="10th.html" target="_blank" style="text-decoration: none; color: #007bff; font-weight: bold; font-size: 15px; margin-bottom: 5px; text-decoration: underline;">
@@ -256,13 +269,13 @@
     </div>
 </div>
 
-<!-- Important Updates Grid Section -->
-<section style="padding: 40px 20px; max-width: 1200px; margin: auto; font-family: 'Segoe UI', sans-serif;">
+<!-- Important Updates Grid Section - यह भी 1 लाइन में 4 कॉलम दिखाएगा -->
+<section style="padding: 40px 20px; max-width: 1300px; margin: auto; font-family: 'Segoe UI', sans-serif;">
     <div style="text-align: center; margin-bottom: 30px;">
         <h2 style="color: #001f3f; border-bottom: 3px solid #ffd700; display: inline-block; padding-bottom: 10px; margin: 0;">Pawan Cyber Home - Important Updates</h2>
     </div>
     
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+    <div class="grid">
         
         <div style="background: white; border: 1px solid #ddd; border-top: 5px solid #001f3f; border-radius: 8px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
             <h3 style="background: #f0f4f8; padding: 10px; margin: -15px -15px 15px -15px; border-radius: 8px 8px 0 0; color: #001f3f;">🛠️ Our Services</h3>
@@ -340,7 +353,7 @@
 </section>
 
 <footer>
-    <span class="special-note">🏠 हमारे यहां घर बैठे सभी सर्विस का लाभ उठाएं  🏠</span>
+    <span class="special-note">🏠 हमारे यहां घर बैठे सभी SERVICE का लाभ उठाएं  🏠</span>
     <p>Pawan Cyber Home (Mobile: 9334370723)</p>
     <a href="https://wa.me/919334370723?text=Namaste%20Pawan%20ji,%20mujhe%20online%20kaam%20karwana%20hai" class="wa-btn" target="_blank">
         🟢 WhatsApp par Chat karein
