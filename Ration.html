@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>राशन कार्ड सेवा | डिजिटल सर्विस हब</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Rozha+One&family=Yantra:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Yantra', sans-serif;
+            background-color: #fcfdfe;
+            background-image: 
+                linear-gradient(to right, rgba(13, 27, 62, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(13, 27, 62, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .neon-card {
+            box-shadow: 0 20px 40px -15px rgba(13, 27, 62, 0.25), 0 0 15px rgba(251, 191, 36, 0.05);
+        }
+        
+        .glow-btn {
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+        }
+        .glow-btn:hover {
+            box-shadow: 0 6px 20px rgba(251, 191, 36, 0.5);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-4 sm:p-10 select-none">
+
+    <!-- नया टॉप नोट सेक्शन (Top Alert Banner) -->
+    <div class="w-full max-w-5xl bg-gradient-to-r from-red-600 to-amber-600 text-white font-bold py-3 px-4 rounded-xl shadow-md text-center mb-6 overflow-hidden flex items-center justify-center gap-2 border border-red-500/30">
+        <span class="flex h-3 w-3 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+        </span>
+        <p class="text-sm sm:text-lg tracking-wide">
+            📢 बिहार के किसी भी ब्लॉक का राशन कार्ड अप्लाई करवाने के लिए संपर्क करें।
+        </p>
+    </div>
+
+    <!-- मुख्य हेडर सेक्शन (Modern Glassmorphism Design) -->
+    <header class="text-center mb-12 w-full max-w-5xl bg-white/60 backdrop-blur-md border border-gray-200/80 rounded-2xl p-6 shadow-sm">
+        <h1 class="text-4xl sm:text-6xl font-black tracking-normal text-[#0d1b3e] mb-3 drop-shadow-sm">
+            राशन कार्ड सेवा
+        </h1>
+        <div class="h-1 w-24 bg-gradient-to-r from-yellow-500 to-amber-500 mx-auto rounded-full mb-4"></div>
+        <p class="text-lg sm:text-2xl font-bold text-slate-700 tracking-wide flex justify-center items-center gap-2 flex-wrap">
+            <span class="bg-blue-50 text-[#0d1b3e] px-3 py-1 rounded-md border border-blue-100">नया आवेदन</span>
+            <span class="text-amber-500">|</span>
+            <span class="bg-blue-50 text-[#0d1b3e] px-3 py-1 rounded-md border border-blue-100">सुधार</span>
+            <span class="text-amber-500">|</span>
+            <span class="bg-blue-50 text-[#0d1b3e] px-3 py-1 rounded-md border border-blue-100">नाम जोड़ना</span>
+        </p>
+    </header>
+
+    <!-- मुख्य कंटेंट ग्रिड -->
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mb-12">
+        
+        <!-- लेफ्ट कार्ड: जरुरी दस्तावेज -->
+        <section class="neon-card bg-gradient-to-b from-[#111936] to-[#090d22] text-white rounded-2xl p-6 sm:p-8 border border-slate-800 flex flex-col justify-between transform hover:-translate-y-1 transition-transform duration-300">
+            <div>
+                <div class="flex items-center gap-3 border-b border-slate-700/60 pb-4 mb-6">
+                    <div class="bg-amber-500/10 p-2 rounded-lg text-amber-400 border border-amber-500/20">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold tracking-wide text-amber-400">जरुरी दस्तावेज</h2>
+                </div>
+                
+                <ul class="space-y-4 text-base sm:text-lg font-medium text-slate-200">
+                    <li class="flex items-center gap-3 bg-slate-800/40 p-2.5 rounded-xl border border-slate-700/30 hover:bg-slate-800/70 transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#fbbf24]"></span>
+                        आधार कार्ड (सभी का)
+                    </li>
+                    <li class="flex items-center gap-3 bg-slate-800/40 p-2.5 rounded-xl border border-slate-700/30 hover:bg-slate-800/70 transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#fbbf24]"></span>
+                        सामूहिक परिवार फोटो
+                    </li>
+                    <li class="flex items-center gap-3 bg-slate-800/40 p-2.5 rounded-xl border border-slate-700/30 hover:bg-slate-800/70 transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#fbbf24]"></span>
+                        बैंक पासबुक
+                    </li>
+                    <li class="flex items-center gap-3 bg-slate-800/40 p-2.5 rounded-xl border border-slate-700/30 hover:bg-slate-800/70 transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#fbbf24]"></span>
+                        मोबाइल नंबर
+                    </li>
+                    <li class="flex items-center gap-3 bg-slate-800/40 p-2.5 rounded-xl border border-slate-700/30 hover:bg-slate-800/70 transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#fbbf24]"></span>
+                        आय / जाति / निवास
+                    </li>
+                </ul>
+            </div>
+
+            <!-- नीचे का नोट विद पल्स एनीमेशन -->
+            <div class="mt-8 p-3 bg-amber-500/5 rounded-xl border border-amber-500/10 flex items-start gap-3">
+                <span class="flex h-3 w-3 relative mt-1.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+                </span>
+                <p class="text-amber-400 text-sm sm:text-base font-semibold leading-relaxed">
+                    आपके पास इनमें से कोई भी दस्तावेज नहीं है तो घबराए नहीं, हमसे संपर्क करे !
+                </p>
+            </div>
+        </section>
+
+        <!-- राइट कार्ड: सरकारी फायदे -->
+        <section class="neon-card bg-gradient-to-b from-[#111936] to-[#090d22] text-white rounded-2xl p-6 sm:p-8 border border-slate-800 flex flex-col justify-between transform hover:-translate-y-1 transition-transform duration-300">
+            <div>
+                <div class="flex items-center gap-3 border-b border-slate-700/60 pb-4 mb-6">
+                    <div class="bg-amber-500/10 p-2 rounded-lg text-amber-400 border border-amber-500/20">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm2 13H9a2 2 0 01-2-2v-7a2 2 0 012-2h6a2 2 0 012 2v7a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold tracking-wide text-amber-400">सरकारी फायदे</h2>
+                </div>
+                
+                <!-- फायदे वाले प्रीमियम बटन -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glow-btn bg-gradient-to-r from-yellow-400 via-amber-400 to-amber-500 text-[#0d1b3e] text-center font-extrabold py-4 px-2 rounded-xl text-sm sm:text-base transform hover:scale-[1.03] transition-all cursor-pointer">
+                        फ्री राशन
+                    </div>
+                    <div class="glow-btn bg-gradient-to-r from-yellow-400 via-amber-400 to-amber-500 text-[#0d1b3e] text-center font-extrabold py-4 px-2 rounded-xl text-sm sm:text-base transform hover:scale-[1.03] transition-all cursor-pointer">
+                        मुफ्त इलाज
+                    </div>
+                    <div class="glow-btn bg-gradient-to-r from-yellow-400 via-amber-400 to-amber-500 text-[#0d1b3e] text-center font-extrabold py-4 px-2 rounded-xl text-sm sm:text-base transform hover:scale-[1.03] transition-all cursor-pointer">
+                        स्कॉलरशिप
+                    </div>
+                    <div class="glow-btn bg-gradient-to-r from-yellow-400 via-amber-400 to-amber-500 text-[#0d1b3e] text-center font-extrabold py-4 px-2 rounded-xl text-sm sm:text-base transform hover:scale-[1.03] transition-all cursor-pointer">
+                        ID कार्ड
+                    </div>
+                </div>
+            </div>
+
+            <!-- लोकेशन / ब्लॉक -->
+            <div class="text-center mt-10">
+                <p class="text-amber-400 text-lg sm:text-xl font-bold tracking-wider bg-amber-400/5 py-2.5 px-6 rounded-xl border border-amber-500/20 inline-block backdrop-blur-sm">
+                    ★ झंझारपुर ब्लॉक, मधुबनी ★
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- व्हाट्सएप्प संपर्क बटन -->
+    <div class="w-full max-w-5xl text-center">
+        <!-- अपना व्हाट्सएप्प नंबर यहाँ बदलें (91XXXXXXXXXX) -->
+        <a href="https://wa.me/91XXXXXXXXXX?text=नमस्ते,%20मुझे%20राशन%20कार्ड%20सेवा%20के%20लिए%20आवेदन%20करना%20है।" 
+           target="_blank" 
+           class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-lg sm:text-xl py-4 px-10 rounded-2xl shadow-[0_10px_25px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-105 active:scale-95 group">
+            <svg class="w-6 h-6 fill-current transform group-hover:rotate-12 transition-transform" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.852.002-2.632-1.023-5.105-2.887-6.972C16.626 1.864 14.158 1.83 11.53 1.83c-5.44 0-9.864 4.42-9.868 9.853-.002 1.748.46 3.452 1.339 4.953l-.991 3.619 3.708-.973zm12.385-6.931c-.33-.165-1.951-.963-2.251-1.073-.3-.109-.518-.165-.736.165-.218.329-.846 1.073-1.037 1.292-.19.218-.381.244-.711.079-.33-.165-1.393-.513-2.654-1.64-1.02-.91-1.708-2.033-1.908-2.363-.2-.33-.021-.508.144-.672.148-.148.33-.385.495-.578.165-.192.219-.329.33-.548.11-.219.055-.411-.028-.576-.082-.165-.736-1.773-1.009-2.432-.266-.643-.538-.553-.736-.563-.19-.01-.409-.01-.628-.01-.218 0-.573.082-.873.411-.3.329-1.145 1.118-1.145 2.724 0 1.605 1.169 3.159 1.33 3.379.162.22 2.298 3.51 5.567 4.921.777.336 1.384.537 1.858.688.781.248 1.492.213 2.054.129.627-.094 1.951-.798 2.224-1.535.272-.736.272-1.369.19-1.5-.082-.131-.299-.213-.629-.378z"/>
+            </svg>
+            अभी ऑनलाइन आवेदन करें
+        </a>
+    </div>
+
+</body>
+</html>
