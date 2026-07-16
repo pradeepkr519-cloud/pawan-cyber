@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matric & Post Matric Scholarship Portal 2026</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #0d2346;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+            color: #ffd700;
+            font-weight: 700; /* हिंदी को और साफ़ दिखाने के लिए बोल्ड किया */
+        }
+
+        /* Container & Grid layout */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        /* Update Banner */
+        .update-banner {
+            background-color: #fff1f1;
+            border-left: 5px solid #ff4d4d;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            font-weight: bold;
+            color: #d63031;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .update-banner i {
+            margin-right: 8px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Main Grid system */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        /* Left and Right Columns */
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* Common Card Style */
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #e1e8ed;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: #0f4c81;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f0f3f6;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+        }
+
+        /* Fast Server Links Section */
+        .server-intro-text {
+            color: #555;
+            font-size: 15px;
+            margin-bottom: 15px;
+            font-weight: 600; /* थोड़ा और बोल्ड किया */
+        }
+
+        .server-links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 10px;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-apply-matric { background-color: #1b9e54; }
+        .btn-apply-matric:hover { background-color: #147d41; }
+
+        .btn-apply-pms { background-color: #e67e22; }
+        .btn-apply-pms:hover { background-color: #d35400; }
+
+        .btn-status { background-color: #1a4294; }
+        .btn-status:hover { background-color: #12306d; }
+
+        .btn-official { 
+            background-color: #536271; 
+            grid-column: span 2; 
+        }
+        .btn-official:hover { background-color: #3e4a55; }
+
+        /* Yojana Jankari text */
+        .info-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600; /* हिंदी मुख्य जानकारी को बोल्ड किया */
+        }
+
+        /* Post Matric Specific Info */
+        .pms-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid #0056b3;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        .pms-box h4 {
+            color: #0056b3;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .warning-box {
+            background-color: #fff9e6;
+            border: 1px dashed #ffb300;
+            padding: 15px;
+            border-radius: 6px;
+            color: #b36b00;
+            font-size: 14.5px;
+            margin-top: 15px;
+            font-weight: 600; /* महत्वपूर्ण सूचना को बोल्ड किया */
+        }
+
+        .warning-box strong {
+            color: #d63031;
+            font-weight: 800;
+        }
+
+        /* Required Documents List */
+        .doc-list {
+            list-style: none;
+        }
+
+        .doc-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #e1e8ed;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            color: #222;
+            font-weight: 600; /* डाक्यूमेंट्स लिस्ट को बोल्ड किया */
+        }
+
+        .doc-list li:last-child {
+            border-bottom: none;
+        }
+
+        .doc-list li i {
+            color: #1b9e54;
+            margin-right: 12px;
+            font-size: 16px;
+        }
+
+        .pms-badge {
+            background-color: #e67e22;
+            color: white;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: auto;
+            font-weight: bold;
+        }
+
+        /* Right Column - Quick Links */
+        .quick-links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .ql-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: #f8fafc;
+            border-left: 4px solid #1a4294;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 0 6px 6px 0;
+            transition: background 0.2s;
+        }
+
+        .ql-item:hover {
+            background-color: #f1f5f9;
+        }
+
+        .badge-live {
+            background-color: #ff3838;
+            color: white;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .whatsapp-link {
+            border-left-color: #25d366;
+            color: #128c7e;
+        }
+
+        /* Contact/Cyber Cafe Widget */
+        .cyber-card {
+            border: 2px dashed #b4f3b4;
+            background-color: #f4fff4;
+            text-align: center;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .cyber-card h4 {
+            color: #c0392b;
+            font-size: 19px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-weight: 700;
+        }
+
+        .cyber-card p {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600; /* साइबर कैफ़े वाली लाइन बोल्ड की */
+        }
+
+        .cyber-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0f4c81;
+            margin-bottom: 5px;
+        }
+
+        .cyber-contact {
+            font-size: 16px;
+            font-weight: bold;
+            color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d2346;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 900px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 20px;
+            }
+            .server-links-grid {
+                grid-template-columns: 1fr;
+            }
+            .btn-official {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>🎓 BIHAR SCHOLARSHIP PORTAL 2026-2027</h1>
+        <p>मैट्रिक (10th) प्रोत्साहन योजना & पोस्ट मैट्रिक (Post-Matric) छात्रवृत्ति ऑनलाइन आवेदन</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Live Alert/Update Banner -->
+        <div class="update-banner">
+            <i class="fa-solid fa-fire"></i> UPDATE: Bihar Board Post-Matric (PMS) 2026-2027 ka online registration active ho chuka hai. Niche diye gaye link se apply karein!
+        </div>
+
+        <!-- Main Workspace Grid -->
+        <div class="main-grid">
+            
+            <!-- Left Side Column -->
+            <div class="left-column">
+                
+                <!-- Server Links Card -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-bolt" style="color: #ffb300;"></i> Fast Server Links</h3>
+                    <p class="server-intro-text">Apna aavedan karne ya status check karne ke liye niche click karein:</p>
+                    
+                    <div class="server-links-grid">
+                        <a href="https://pmsonline.bihar.gov.in/pms/pms_online/Default.aspx" target="_blank" class="btn btn-apply-matric">
+                            <i class="fa-solid fa-user-graduate"></i> Apply Online (PMS) EBC/BC
+                        </a>
+                        <a href="https://scstpmsonline.bihar.gov.in/pms/pms_online/Default.aspx" target="_blank" class="btn btn-apply-pms">
+                            <i class="fa-solid fa-graduation-cap"></i> Apply Online (PMS) SC/ST
+                        </a>
+                        <a href="https://pmsonline.bihar.gov.in/pms/pms_online/Default.aspx" target="_blank" class="btn btn-official">
+                            <i class="fa-solid fa-building-columns"></i> Official Website
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Info Card -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-circle-info" style="color: #1a4294;"></i> योजना की जानकारी (Scheme Details)</h3>
+                    
+                    <p class="info-text">बिहार सरकार द्वारा राज्य के मेधावी छात्रों को उच्च शिक्षा के लिए वित्तीय सहायता प्रदान करने के उद्देश्य से विभिन्न छात्रवृत्ति योजनाएं चलाई जा रही हैं.</p>
+
+                    <!-- Post Matric Info -->
+                    <div class="pms-box">
+                        <h4><i class="fa-solid fa-book-open-reader"></i> 1. बिहार पोस्ट मैट्रिक स्कॉलरशिप (PMS) योजना:</h4>
+                        <p class="info-text" style="margin-bottom: 0; font-size: 14.5px;">
+                            यह छात्रवृत्ति OBC, SC, ST और EBC वर्ग के उन छात्रों के लिए है जो मैट्रिक (10th) पास करने के बाद आगे की पढ़ाई (जैसे 11th, 12th, Graduation, B.Sc, B.Com, B.Tech, Diploma, ITI) कर रहे हैं. इसके तहत कोर्स के अनुसार फीस रीइम्बर्समेंट और आर्थिक सहायता दी जाती है.
+                        </p>
+                    </div>
+
+                    <div class="warning-box">
+                        <i class="fa-solid fa-triangle-exclamation"></i> <strong>महत्वपूर्ण सूचना:</strong> बैंक खाता केवल छात्र/छात्रा के नाम का होना चाहिए और वह आधार कार्ड से लिंक (NPCI Seeded) होना अनिवार्य है, अन्यथा पैसा रुक सकता है.
+                    </div>
+                </div>
+
+                <!-- Documents Card -->
+                <div class="card">
+                    <h3><i class="fa-regular fa-folder-open" style="color: #e67e22;"></i> आवश्यक दस्तावेज (Zaroori Kagaz)</h3>
+                    <p class="server-intro-text" style="margin-bottom: 10px;">ऑनलाइन आवेदन करने से पहले यह सभी दस्तावेज अपने पास तैयार रखें:</p>
+                    
+                    <ul class="doc-list">
+                        <li><i class="fa-solid fa-circle-right"></i> मैट्रिक (10th) का मार्कशीट</li>
+                        <li><i class="fa-solid fa-circle-right"></i> आधार कार्ड (विवरण मार्कशीट से मैच होना चाहिए)</li>
+                        <li><i class="fa-solid fa-circle-right"></i> जाति प्रमाण पत्र (Caste Certificate)</li>
+                        <li><i class="fa-solid fa-circle-right"></i> आय प्रमाण पत्र (Income Certificate - नया वित्तीय वर्ष का)</li>
+                        <li><i class="fa-solid fa-circle-right"></i> निवास प्रमाण पत्र (Residence Certificate)</li>
+                        <li><i class="fa-solid fa-circle-right"></i> बैंक पासबुक (Aadhar NPCI Link Account)</li>
+                        <li><i class="fa-solid fa-circle-right"></i> चालू मोबाइल नंबर और ईमेल आईडी</li>
+                        <li><i class="fa-solid fa-circle-right"></i> एडमिशन रसीद (Admission Fee Receipt) <span class="pms-badge">PMS Only</span></li>
+                        <li><i class="fa-solid fa-circle-right"></i> बोनाफाइड सर्टिफिकेट (Bonafide Certificate) <span class="pms-badge">PMS Only</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Right Side Column (Sidebar) -->
+            <div class="right-column">
+                
+                <!-- Quick Links Box -->
+                <div class="card">
+                    <h3><i class="fa-solid fa-link" style="color: #7f8c8d;"></i> Quick Links</h3>
+                    <div class="quick-links-list">
+                        <a href="https://pmsonline.bihar.gov.in/pms/pms_online/Default.aspx" target="_blank" class="ql-item">
+                            <span>Official Website (PMS)</span>
+                            <span class="badge-live">Live</span>
+                        </a>
+                        <a href="#" class="ql-item">
+                            <span>Bonafide Format Download</span>
+                        </a>
+                        <a href="#" class="ql-item">
+                            <span>Student List For Registration</span>
+                        </a>
+                        <a href="#" class="ql-item">
+                            <span>Category Wise Fee Structure</span>
+                        </a>
+                        <a href="#" class="ql-item whatsapp-link">
+                            <span><i class="fa-brands fa-whatsapp"></i> Apply Via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Cyber Cafe Card -->
+                <div class="cyber-card">
+                    <h4><i class="fa-solid fa-phone-volume"></i> फॉर्म भरवाने के लिए :</h4>
+                    <p>अगर आपको फॉर्म भरने में कोई दिक्कत हो तो हमारे साइबर कैफ़े से संपर्क करें :</p>
+                    <div class="cyber-name">Pawan Cyber Home</div>
+                    <div class="cyber-contact">
+                        <i class="fa-solid fa-mobile-screen-button" style="color: #1a4294;"></i> Call/WhatsApp: 9334370723
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Matric & Post Matric Scholarship Portal | All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
