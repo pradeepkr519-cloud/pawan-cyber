@@ -39,7 +39,7 @@
         header p {
             font-size: 16px;
             color: #ffd700;
-            font-weight: 700; /* हिंदी को और साफ़ दिखाने के लिए बोल्ड किया */
+            font-weight: 700;
         }
 
         /* Container & Grid layout */
@@ -118,7 +118,7 @@
             color: #555;
             font-size: 15px;
             margin-bottom: 15px;
-            font-weight: 600; /* थोड़ा और बोल्ड किया */
+            font-weight: 600;
         }
 
         .server-links-grid {
@@ -150,14 +150,11 @@
         .btn-apply-pms { background-color: #e67e22; }
         .btn-apply-pms:hover { background-color: #d35400; }
 
-        .btn-status { background-color: #1a4294; }
-        .btn-status:hover { background-color: #12306d; }
-
-        .btn-official { 
-            background-color: #536271; 
-            grid-column: span 2; 
-        }
+        .btn-official { background-color: #536271; }
         .btn-official:hover { background-color: #3e4a55; }
+
+        .btn-whatsapp-server { background-color: #25d366; }
+        .btn-whatsapp-server:hover { background-color: #128c7e; }
 
         /* Yojana Jankari text */
         .info-text {
@@ -165,7 +162,7 @@
             line-height: 1.7;
             color: #2c3e50;
             margin-bottom: 15px;
-            font-weight: 600; /* हिंदी मुख्य जानकारी को बोल्ड किया */
+            font-weight: 600;
         }
 
         /* Post Matric Specific Info */
@@ -192,7 +189,7 @@
             color: #b36b00;
             font-size: 14.5px;
             margin-top: 15px;
-            font-weight: 600; /* महत्वपूर्ण सूचना को बोल्ड किया */
+            font-weight: 600;
         }
 
         .warning-box strong {
@@ -212,7 +209,7 @@
             align-items: center;
             font-size: 15px;
             color: #222;
-            font-weight: 600; /* डाक्यूमेंट्स लिस्ट को बोल्ड किया */
+            font-weight: 600;
         }
 
         .doc-list li:last-child {
@@ -272,11 +269,6 @@
             letter-spacing: 0.5px;
         }
 
-        .whatsapp-link {
-            border-left-color: #25d366;
-            color: #128c7e;
-        }
-
         /* Contact/Cyber Cafe Widget */
         .cyber-card {
             border: 2px dashed #b4f3b4;
@@ -301,7 +293,7 @@
             font-size: 14px;
             color: #333;
             margin-bottom: 15px;
-            font-weight: 600; /* साइबर कैफ़े वाली लाइन बोल्ड की */
+            font-weight: 600;
         }
 
         .cyber-name {
@@ -345,9 +337,6 @@
             .server-links-grid {
                 grid-template-columns: 1fr;
             }
-            .btn-official {
-                grid-column: auto;
-            }
         }
     </style>
 </head>
@@ -387,6 +376,9 @@
                         <a href="https://pmsonline.bihar.gov.in/pms/pms_online/Default.aspx" target="_blank" class="btn btn-official">
                             <i class="fa-solid fa-building-columns"></i> Official Website
                         </a>
+                        <a href="https://wa.me/919334370723?text=Mujhe%20PMS%20Scholarship%20ka%20form%20bhrwana%20hai" target="_blank" class="btn btn-whatsapp-server">
+                            <i class="fa-brands fa-whatsapp"></i> Apply Via WhatsApp
+                        </a>
                     </div>
                 </div>
 
@@ -400,7 +392,7 @@
                     <div class="pms-box">
                         <h4><i class="fa-solid fa-book-open-reader"></i> 1. बिहार पोस्ट मैट्रिक स्कॉलरशिप (PMS) योजना:</h4>
                         <p class="info-text" style="margin-bottom: 0; font-size: 14.5px;">
-                            यह छात्रवृत्ति OBC, SC, ST और EBC वर्ग के उन छात्रों के लिए है जो मैट्रिक (10th) पास करने के बाद आगे की पढ़ाई (जैसे 11th, 12th, Graduation, B.Sc, B.Com, B.Tech, Diploma, ITI) कर रहे हैं. इसके तहत कोर्स के अनुसार फीस रीइम्बर्समेंट और आर्थिक सहायता दी जाती है.
+                            यह छात्रवृत्ति OBC, SC, ST और EBC वर्ग के उन छात्रों के लिए है जो मैट्रिक (10th) पास करने के बाद आगे की पढ़ाई (जैसे 11th, 12th, Graduation, B.Sc, B.Com, B.Tech, Diploma, ITI) कर रहे हैं. इसके तहत कोर्स के अनुसार फीस रीइम्बर्समेंट और आर्थिक सहायता दी जाती.
                         </p>
                     </div>
 
@@ -449,9 +441,9 @@
                         <a href="#" class="ql-item">
                             <span>Category Wise Fee Structure</span>
                         </a>
-                       <a href="https://wa.me/919334370723?text=Mujhe%20PMS%20Scholarship%20ka%20form%20bhrwana%20hai" target="_blank" style="border-left-color: #25D366; color: #16a34a;" class="ql-item">
-    <span><i class="fa-brands fa-whatsapp"></i> Apply Via WhatsApp</span>
-</a>
+                        <a href="https://wa.me/919334370723?text=Mujhe%20PMS%20Scholarship%20ka%20form%20bhrwana%20hai" target="_blank" style="border-left-color: #25D366; color: #16a34a;" class="ql-item">
+                            <span><i class="fa-brands fa-whatsapp"></i> Apply Via WhatsApp</span>
+                        </a>
                     </div>
                 </div>
 
